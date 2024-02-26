@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pftbg"
+    tools:context=".Creattimesheet">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                app:srcCompat="@drawable/pftbgicon" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="372dp"
+        android:layout_height="529dp"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+        <LinearLayout
+            android:layout_width="372dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/editTextCreateTaskName"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bgg"
+                android:ems="10"
+                android:hint="Task Name"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewSelectDate2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+
+                        android:paddingLeft="10dp"
+
+
+                        android:text="Select Date"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp">
+
+                    <Button
+                        android:id="@+id/buttonSelectDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+
+                        android:background="@drawable/input_bgg"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Select Date"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:id="@+id/ShowDate"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+
+                        android:paddingLeft="10dp"
+
+
+
+                        android:textColor="@color/black"
+                        android:textSize="16sp"></TextView>
+                </LinearLayout>
+                />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:paddingLeft="10dp"
+
+
+                        android:text="from"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"></TextView>
+                    <TextView
+                        android:id="@+id/ShowStarttime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+
+
+                        android:text="to"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+
+
+                        />
+                    <TextView
+                        android:id="@+id/ShowEndtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+
+
+
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/buttonStartTime"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+
+                        android:background="@drawable/input_bgg"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Start time"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        />
+
+                    <Button
+                        android:id="@+id/buttonEndTime"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:background="@drawable/input_bgg"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="End time"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="138dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="14dp"
+
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+
+                        android:paddingLeft="10dp"
+
+
+                        android:text="Description"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextCreateDescription"
+                        android:layout_width="300dp"
+                        android:layout_height="80dp"
+
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/input_bgg"
+                        android:ems="10"
+
+                        android:inputType="textMultiLine|textPersonName"
+
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+
+                    <EditText
+
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+
+
+                        android:background="@drawable/input_bg"
+                        android:ems="10"
+                        android:hint="start time"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+
+
+                        android:paddingBottom="10dp" />
+
+                    <Button
+                        android:id="@+id/buttonAddphoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:background="@drawable/addphotoset"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Add Photo"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+                    <ImageView
+                        android:id="@+id/Photoview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="303dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/buttonCancelEntry"
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="34dp"
+                        android:background="@drawable/cancelbtn"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="10dp"
+                        android:text="Cancel"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/buttonCreateEntry"
+                        android:layout_width="140dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="34dp"
+                        android:background="@drawable/createtimesheet"
+                        android:color="#00D9FF"
+                        android:text="Create timesheet" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

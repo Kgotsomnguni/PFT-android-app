@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "694651627790",
+    "project_id": "profocusedtiming",
+    "storage_bucket": "profocusedtiming.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694651627790:android:52dff68a0c09fb04774f5f",
+        "android_client_info": {
+          "package_name": "com.example.profocusedtiming"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694651627790-n6gt8fgk6rik7p8shmdn14j7ub79ghg0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuGomMIVan9WBCoFlG7jik5jMz-o_vV6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694651627790-n6gt8fgk6rik7p8shmdn14j7ub79ghg0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

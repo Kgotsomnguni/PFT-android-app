@@ -1,0 +1,1128 @@
+Index: app/src/main/res/layout/entries.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/entries.xml b/app/src/main/res/layout/entries.xml
+--- a/app/src/main/res/layout/entries.xml	
++++ b/app/src/main/res/layout/entries.xml	(date 1686611648797)
+@@ -12,7 +12,8 @@
+         android:layout_marginStart="292dp"
+         android:layout_marginTop="36dp"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
++        app:layout_constraintTop_toTopOf="parent"
++        android:contentDescription="TODO" />
+ 
+     <View
+         android:id="@+id/divider5"
+Index: app/src/main/res/layout/allategories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/allategories.xml b/app/src/main/res/layout/allategories.xml
+new file mode 100644
+--- /dev/null	(date 1686610659311)
++++ b/app/src/main/res/layout/allategories.xml	(date 1686610659311)
+@@ -0,0 +1,57 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:background="@drawable/pftbg"
++    android:layout_height="wrap_content">
++
++    <TextView
++        android:id="@+id/txtCategoryName"
++        android:layout_width="0dp"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="24dp"
++        android:layout_marginTop="16dp"
++        android:layout_marginEnd="24dp"
++        android:layout_marginBottom="28dp"
++        android:textSize="24sp"
++        android:textStyle="bold"
++        android:textColor="@color/white"
++        app:layout_constraintBottom_toTopOf="@+id/divider"
++        app:layout_constraintEnd_toStartOf="@+id/txtGoalTitle"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <TextView
++        android:id="@+id/txtGoalTitle"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="16dp"
++        android:layout_marginEnd="32dp"
++        android:text="Goal"
++        android:textColor="@color/white"
++        android:textSize="16sp"
++        android:textStyle="bold"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <TextView
++        android:id="@+id/txtMaxGoal"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="8dp"
++        android:textSize="14sp"
++        app:layout_constraintStart_toStartOf="@+id/txtGoalTitle"
++        app:layout_constraintTop_toBottomOf="@+id/txtGoalTitle" />
++
++    <View
++        android:id="@+id/divider"
++        android:layout_width="409dp"
++        android:layout_height="1dp"
++        android:layout_marginStart="1dp"
++        android:layout_marginEnd="1dp"
++        android:background="?android:attr/listDivider"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_advanced_entries.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_advanced_entries.xml b/app/src/main/res/layout/activity_advanced_entries.xml
+new file mode 100644
+--- /dev/null	(date 1686611925335)
++++ b/app/src/main/res/layout/activity_advanced_entries.xml	(date 1686611925335)
+@@ -0,0 +1,362 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="@drawable/pftbg"
++    tools:context=".AdvancedEntries">
++
++    <ScrollView
++        android:id="@+id/scrollView2"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent">
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:orientation="horizontal">
++
++            <TextView
++                android:id="@+id/textView9"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_weight="1"
++                android:text="TextView" />
++
++            <ImageView
++                android:id="@+id/imageView"
++                android:layout_width="match_parent"
++                android:layout_height="95dp"
++                app:srcCompat="@drawable/pftbgicon"
++                android:contentDescription="TODO" />
++        </LinearLayout>
++    </ScrollView>
++
++    <LinearLayout
++        android:id="@+id/linearLayout"
++        android:layout_width="372dp"
++        android:layout_height="529dp"
++        android:background="@drawable/border"
++        android:orientation="horizontal"
++        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="@+id/scrollView2"
++        app:layout_constraintTop_toTopOf="parent">
++
++
++        <TextView
++            android:id="@+id/textView8"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_weight="1"
++            android:text="TextView" />
++
++        <LinearLayout
++            android:layout_width="372dp"
++            android:layout_height="match_parent"
++            android:orientation="vertical">
++
++
++            <EditText
++                android:id="@+id/editTextCreateTaskName"
++                android:layout_width="300dp"
++                android:layout_height="48dp"
++                android:layout_marginLeft="40dp"
++                android:layout_marginTop="10dp"
++                android:background="@drawable/input_bgg"
++                android:ems="10"
++                android:hint="Task Name"
++                android:inputType="textPersonName"
++                android:paddingLeft="10dp"
++                android:paddingTop="10dp"
++                android:paddingRight="10dp"
++                android:paddingBottom="10dp"
++
++
++                />
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginTop="18dp"
++                android:orientation="vertical">
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content">
++
++                    <TextView
++                        android:id="@+id/textViewSelectDate2"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_marginLeft="40dp"
++
++                        android:paddingLeft="10dp"
++
++
++                        android:text="Select Date"
++                        android:textColor="@color/black"
++                        android:textSize="16sp" />
++                </LinearLayout>
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="47dp">
++
++                    <Button
++                        android:id="@+id/buttonSelectDate"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_marginLeft="40dp"
++
++                        android:background="@drawable/input_bgg"
++                        android:paddingLeft="10dp"
++                        android:paddingTop="10dp"
++                        android:paddingRight="10dp"
++                        android:paddingBottom="10dp"
++                        android:text="Select Date"
++                        android:textAlignment="textStart"
++                        android:textColor="@color/black" />
++                    <TextView
++                        android:id="@+id/ShowDate"
++                        android:layout_width="150dp"
++                        android:layout_height="wrap_content"
++                        android:layout_marginLeft="40dp"
++
++                        android:paddingLeft="10dp"
++
++
++
++                        android:textColor="@color/black"
++                        android:textSize="16sp"></TextView>
++                </LinearLayout>
++                />
++
++                <LinearLayout
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:layout_marginTop="18dp"
++                    android:orientation="horizontal">
++
++                    <TextView
++
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_marginLeft="40dp"
++                        android:paddingLeft="10dp"
++
++
++                        android:text="from"
++                        android:textColor="@color/black"
++                        android:textSize="16sp"></TextView>
++                    <TextView
++                        android:id="@+id/ShowStarttime"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_marginLeft="12dp"
++                        android:textColor="@color/black"
++                        android:textSize="16sp"
++                        />
++
++
++                    <TextView
++
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_marginLeft="120dp"
++
++
++                        android:text="to"
++                        android:textColor="@color/black"
++                        android:textSize="16sp"
++
++
++                        />
++                    <TextView
++                        android:id="@+id/ShowEndtime"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_marginLeft="12dp"
++
++
++
++                        android:textColor="@color/black"
++                        android:textSize="16sp"
++
++
++                        />
++                </LinearLayout>
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++
++                    android:orientation="horizontal">
++
++
++                    <Button
++                        android:id="@+id/buttonStartTime"
++                        android:layout_width="140dp"
++                        android:layout_height="wrap_content"
++                        android:layout_marginLeft="40dp"
++
++                        android:background="@drawable/input_bgg"
++                        android:paddingLeft="10dp"
++                        android:paddingTop="10dp"
++                        android:paddingRight="10dp"
++                        android:paddingBottom="10dp"
++                        android:text="Start time"
++                        android:textAlignment="textStart"
++                        android:textColor="@color/black"
++                        />
++
++                    <Button
++                        android:id="@+id/buttonEndTime"
++                        android:layout_width="140dp"
++                        android:layout_height="wrap_content"
++                        android:layout_marginLeft="20dp"
++
++                        android:background="@drawable/input_bgg"
++                        android:paddingLeft="10dp"
++                        android:paddingTop="10dp"
++                        android:paddingRight="10dp"
++                        android:paddingBottom="10dp"
++                        android:text="End time"
++                        android:textAlignment="textStart"
++                        android:textColor="@color/black" />
++
++
++                </LinearLayout>
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="138dp"
++                    android:layout_marginTop="14dp"
++                    android:layout_marginBottom="14dp"
++
++                    android:orientation="vertical">
++
++                    <TextView
++
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_marginLeft="40dp"
++
++                        android:paddingLeft="10dp"
++
++
++                        android:text="Description"
++                        android:textColor="@color/black"
++                        android:textSize="16sp"
++
++                        />
++
++                    <EditText
++                        android:id="@+id/editTextCreateDescription"
++                        android:layout_width="300dp"
++                        android:layout_height="80dp"
++
++                        android:layout_marginLeft="40dp"
++                        android:background="@drawable/input_bgg"
++                        android:ems="10"
++
++                        android:inputType="textMultiLine|textPersonName"
++
++
++                        />
++
++                </LinearLayout>
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++
++                    android:orientation="horizontal">
++
++
++                    <EditText
++
++                        android:layout_width="140dp"
++                        android:layout_height="wrap_content"
++                        android:layout_marginLeft="40dp"
++
++
++                        android:background="@drawable/input_bg"
++                        android:ems="10"
++                        android:hint="start time"
++                        android:inputType="textPersonName"
++                        android:minHeight="48dp"
++                        android:paddingLeft="10dp"
++                        android:paddingTop="10dp"
++                        android:paddingRight="10dp"
++
++
++                        android:paddingBottom="10dp" />
++
++                    <Button
++                        android:id="@+id/buttonAddphoto"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_marginLeft="20dp"
++
++                        android:background="@drawable/addphotoset"
++                        android:paddingLeft="10dp"
++                        android:paddingTop="10dp"
++                        android:paddingRight="10dp"
++                        android:paddingBottom="10dp"
++                        android:text="Add Photo"
++                        android:textAlignment="center"
++                        android:textColor="@color/white" />
++                    <ImageView
++                        android:id="@+id/Photoview2"
++                        android:layout_width="match_parent"
++                        android:layout_height="40dp"
++                        android:contentDescription="TODO" />
++
++
++
++                </LinearLayout>
++
++                <LinearLayout
++                    android:layout_width="303dp"
++                    android:layout_height="wrap_content"
++                    android:layout_marginLeft="40dp"
++
++                    android:orientation="horizontal">
++
++
++                    <Button
++                        android:id="@+id/buttonCancelEntry"
++                        android:layout_width="138dp"
++                        android:layout_height="wrap_content"
++                        android:layout_marginTop="34dp"
++                        android:background="@drawable/cancelbtn"
++                        android:paddingLeft="10dp"
++                        android:paddingTop="10dp"
++                        android:paddingRight="0dp"
++                        android:paddingBottom="10dp"
++                        android:text="Cancel"
++                        android:textColor="@color/white" />
++
++                    <Button
++                        android:id="@+id/buttonCreateEntry"
++                        android:layout_width="140dp"
++                        android:layout_height="48dp"
++                        android:layout_marginLeft="20dp"
++                        android:layout_marginTop="34dp"
++                        android:background="@drawable/createtimesheet"
++                        android:color="#00D9FF"
++                        android:text="Create timesheet" />
++
++
++                </LinearLayout>
++
++
++            </LinearLayout>
++
++
++        </LinearLayout>
++    </LinearLayout>
++</androidx.constraintlayout.widget.ConstraintLayout>
++
+Index: app/src/main/res/layout/activity_creattimesheet.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_creattimesheet.xml b/app/src/main/res/layout/activity_creattimesheet.xml
+--- a/app/src/main/res/layout/activity_creattimesheet.xml	
++++ b/app/src/main/res/layout/activity_creattimesheet.xml	(date 1686611648788)
+@@ -28,7 +28,8 @@
+                 android:id="@+id/imageView"
+                 android:layout_width="match_parent"
+                 android:layout_height="95dp"
+-                app:srcCompat="@drawable/pftbgicon" />
++                app:srcCompat="@drawable/pftbgicon"
++                android:contentDescription="TODO" />
+         </LinearLayout>
+     </ScrollView>
+ 
+@@ -130,7 +131,7 @@
+                         android:textColor="@color/black"
+                         android:textSize="16sp"></TextView>
+                 </LinearLayout>
+-                />
++
+ 
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+@@ -309,7 +310,8 @@
+                         android:textColor="@color/white" />
+                     <ImageView
+                         android:layout_width="match_parent"
+-                        android:layout_height="40dp"/>
++                        android:layout_height="40dp"
++                        android:contentDescription="TODO" />
+ 
+ 
+ 
+Index: app/src/main/res/layout/activity_advanced_categories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_advanced_categories.xml b/app/src/main/res/layout/activity_advanced_categories.xml
+--- a/app/src/main/res/layout/activity_advanced_categories.xml	
++++ b/app/src/main/res/layout/activity_advanced_categories.xml	(date 1686611806673)
+@@ -72,7 +72,7 @@
+                 android:paddingBottom="10dp"
+ 
+ 
+-                />
++                android:autofillHints="" />
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+@@ -92,10 +92,12 @@
+                 android:textColor="@color/black"
+                 android:textSize="16sp" />
+         </LinearLayout>
++
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
++
+             <LinearLayout
+                 android:layout_width="249dp"
+                 android:layout_height="wrap_content"
+@@ -129,25 +131,28 @@
+                 </SeekBar>
+ 
+             </LinearLayout>
++
+             <TextView
+                 android:id="@+id/mintext"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:layout_marginTop="20dp"
+-                android:textSize="24dp"
+                 android:text="2"
+-                android:textColor="@color/black">
++                android:textColor="@color/black"
++                android:textSize="24dp">
+ 
+-            </TextView> <TextView
+-            android:layout_width="wrap_content"
+-            android:layout_height="match_parent"
+-            android:layout_marginTop="20dp"
+-            android:layout_marginLeft="11dp"
+-            android:textSize="24dp"
+-            android:textColor="@color/black"
+-            android:text="hours">
++            </TextView>
++
++            <TextView
++                android:layout_width="wrap_content"
++                android:layout_height="match_parent"
++                android:layout_marginLeft="11dp"
++                android:layout_marginTop="20dp"
++                android:text="hours"
++                android:textColor="@color/black"
++                android:textSize="24dp">
+ 
+-        </TextView>
++            </TextView>
+         </LinearLayout>
+ 
+         <LinearLayout
+@@ -212,16 +217,17 @@
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             >
++
+             <Button
+                 android:id="@+id/CategoryCancel"
+ 
+-                android:layout_marginLeft="20dp"
+                 android:layout_width="140dp"
+                 android:layout_height="48dp"
++                android:layout_marginLeft="20dp"
+                 android:background="@drawable/cancelbtn"
+                 android:color="#00D9FF"
+                 android:text="cancel"
+-                android:textColor="@color/white">
++                android:textColor="#000000">
+ 
+             </Button>
+             <Button
+@@ -232,7 +238,8 @@
+                 android:layout_height="48dp"
+                 android:background="@drawable/createtimesheet"
+                 android:color="#00D9FF"
+-                android:text="Create Category">
++                android:text="Create Category"
++                style="?android:attr/buttonBarButtonStyle">
+ 
+             </Button>
+ 
+Index: app/src/main/res/layout/testout.xml
+===================================================================
+diff --git a/app/src/main/res/layout/testout.xml b/app/src/main/res/layout/testout.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/testout.xml	
++++ /dev/null	
+@@ -1,128 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context=".LogInActivity">
+-
+-    <ProgressBar
+-        android:id="@+id/progressBarLogIn"
+-        style="?android:attr/progressBarStyle"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:visibility="invisible"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-    <ScrollView
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent">
+-
+-        <androidx.constraintlayout.widget.ConstraintLayout
+-            android:layout_width="match_parent"
+-            android:layout_height="wrap_content" >
+-
+-            <EditText
+-                android:id="@+id/edTxtPassword"
+-                android:layout_width="0dp"
+-                android:layout_height="wrap_content"
+-                android:layout_marginStart="24dp"
+-                android:layout_marginTop="8dp"
+-                android:layout_marginEnd="24dp"
+-                android:ems="10"
+-                android:inputType="textPassword"
+-                app:layout_constraintEnd_toEndOf="parent"
+-                app:layout_constraintStart_toStartOf="parent"
+-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+-
+-            <EditText
+-                android:id="@+id/edtxtEmailAddressRegister"
+-                android:layout_width="0dp"
+-                android:layout_height="wrap_content"
+-                android:layout_marginStart="24dp"
+-                android:layout_marginTop="8dp"
+-                android:layout_marginEnd="24dp"
+-                android:ems="10"
+-                android:inputType="textEmailAddress"
+-                app:layout_constraintEnd_toEndOf="parent"
+-                app:layout_constraintStart_toStartOf="parent"
+-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+-
+-            <TextView
+-                android:id="@+id/txtLogInTitle"
+-                android:layout_width="wrap_content"
+-                android:layout_height="wrap_content"
+-                android:layout_marginTop="60dp"
+-                android:text="Log In"
+-                android:textSize="34sp"
+-                android:textStyle="bold"
+-                app:layout_constraintEnd_toEndOf="parent"
+-                app:layout_constraintStart_toStartOf="parent"
+-                app:layout_constraintTop_toTopOf="parent" />
+-
+-            <TextView
+-                android:id="@+id/textView2"
+-                android:layout_width="wrap_content"
+-                android:layout_height="wrap_content"
+-                android:layout_marginStart="24dp"
+-                android:layout_marginTop="24dp"
+-                android:text="Email"
+-                app:layout_constraintStart_toStartOf="parent"
+-                app:layout_constraintTop_toBottomOf="@+id/txtLogInTitle" />
+-
+-            <LinearLayout
+-                android:layout_width="wrap_content"
+-                android:layout_height="wrap_content"
+-                android:layout_marginTop="16dp"
+-                android:orientation="horizontal"
+-                app:layout_constraintEnd_toEndOf="parent"
+-                app:layout_constraintStart_toStartOf="parent"
+-                app:layout_constraintTop_toBottomOf="@+id/btnLogIn">
+-
+-                <TextView
+-                    android:id="@+id/textView4"
+-                    android:layout_width="wrap_content"
+-                    android:layout_height="wrap_content"
+-                    android:text="Don't have an account yet" />
+-
+-                <TextView
+-                    android:id="@+id/txtRegister"
+-                    android:layout_width="wrap_content"
+-                    android:layout_height="wrap_content"
+-                    android:layout_marginStart="8dp"
+-                    android:text="Register  "
+-                    android:textColor="#2196F3"
+-                    android:textStyle="bold" />
+-            </LinearLayout>
+-
+-            <TextView
+-                android:id="@+id/textView3"
+-                android:layout_width="wrap_content"
+-                android:layout_height="wrap_content"
+-                android:layout_marginStart="24dp"
+-                android:layout_marginTop="16dp"
+-                android:text="Password"
+-                app:layout_constraintStart_toStartOf="parent"
+-                app:layout_constraintTop_toBottomOf="@+id/edtxtEmailAddressRegister" />
+-
+-            <Button
+-                android:id="@+id/btnLogIn"
+-                android:layout_width="0dp"
+-                android:layout_height="wrap_content"
+-                android:layout_marginStart="24dp"
+-                android:layout_marginTop="16dp"
+-                android:layout_marginEnd="24dp"
+-                android:text="Log In"
+-                android:textColor="#FFFFFF"
+-                app:cornerRadius="7dp"
+-                app:layout_constraintEnd_toEndOf="parent"
+-                app:layout_constraintHorizontal_bias="0.0"
+-                app:layout_constraintStart_toStartOf="parent"
+-                app:layout_constraintTop_toBottomOf="@+id/edTxtPassword" />
+-        </androidx.constraintlayout.widget.ConstraintLayout>
+-    </ScrollView>
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/profocusedtiming/Category.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/profocusedtiming/Category.java b/app/src/main/java/com/example/profocusedtiming/Category.java
+--- a/app/src/main/java/com/example/profocusedtiming/Category.java	
++++ b/app/src/main/java/com/example/profocusedtiming/Category.java	(date 1686601982024)
+@@ -33,13 +33,13 @@
+         Name = name;
+     }
+ 
+-    public int getGoal() {
++    /*public int getGoal() {
+         return Goal;
+-    }
++    }*/
+ 
+-    public void setGoal(int goal) {
++    /*public void setGoal(int goal) {
+         Goal = goal;
+-    }
++    } */
+ 
+     public int getNumberOfItems() {
+         return NumberOfItems;
+Index: app/src/main/java/com/example/profocusedtiming/AdvancedEntries.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/profocusedtiming/AdvancedEntries.java b/app/src/main/java/com/example/profocusedtiming/AdvancedEntries.java
+new file mode 100644
+--- /dev/null	(date 1686607024135)
++++ b/app/src/main/java/com/example/profocusedtiming/AdvancedEntries.java	(date 1686607024135)
+@@ -0,0 +1,184 @@
++package com.example.profocusedtiming;
++
++import android.Manifest;
++import android.app.Activity;
++import android.app.DatePickerDialog;
++import android.app.TimePickerDialog;
++import android.content.Intent;
++import android.content.pm.PackageManager;
++import android.graphics.Bitmap;
++import android.os.Bundle;
++import android.provider.MediaStore;
++import android.view.View;
++import android.widget.Button;
++import android.widget.DatePicker;
++import android.widget.ImageView;
++import android.widget.TextView;
++import android.widget.TimePicker;
++import android.widget.Toast;
++
++import androidx.activity.result.ActivityResult;
++import androidx.activity.result.ActivityResultCallback;
++import androidx.activity.result.ActivityResultLauncher;
++import androidx.activity.result.contract.ActivityResultContracts;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.core.app.ActivityCompat;
++import androidx.core.content.ContextCompat;
++
++public class AdvancedEntries extends AppCompatActivity {
++
++    Button  btnDate;
++    TextView tv2;
++    TextView StartTime;
++    TextView EndTime;
++    Button btnEndTime;
++    Button btnStartTime;
++    private static final int REQUEST_CAMERA_PERMISSION = 200;
++    private ImageView imageView;
++    private Button buttonAddphoto;
++    private ActivityResultLauncher<Intent> cameraLauncher;
++    private boolean tookItemImage = false;
++
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_advanced_entries);
++        imageView = findViewById(R.id.imageView);
++        buttonAddphoto = findViewById(R.id.buttonAddphoto);
++        //new code
++        Button cancel = findViewById(R.id.buttonCancelEntry);
++        Button  btnDate= findViewById(R.id.buttonSelectDate);
++        tv2 = findViewById(R.id.ShowDate);
++        StartTime = findViewById(R.id.ShowStarttime);
++        EndTime = findViewById(R.id.ShowEndtime);
++        btnEndTime=findViewById(R.id.buttonEndTime);
++        btnStartTime=findViewById(R.id.buttonStartTime);
++        Button CreateEntry = findViewById(R.id.buttonCreateEntry);
++        buttonAddphoto = findViewById(R.id.buttonAddphoto);
++        imageView = findViewById(R.id.imageView);
++        //end of code
++        //-------------
++        CreateEntry.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++
++
++
++            }
++        });
++        //------
++        btnDate.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                OpenDateDialog();
++            }
++        });
++        //method for when the cancel button is clicked.
++        cancel.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                startActivity(new Intent(AdvancedEntries.this,HomeActivity.class));
++            }
++        });
++
++        //method for start time
++        btnStartTime.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                OpenTimeDialog();
++            }
++        });
++        //method for end time
++        btnEndTime.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                EndTimeDialog();
++            }
++        });
++        //-------
++        cameraLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
++                new ActivityResultCallback<ActivityResult>() {
++                    @Override
++                    public void onActivityResult(ActivityResult result) {
++                        if (result.getResultCode() == Activity.RESULT_OK) {
++                            Intent data = result.getData();
++                            Bundle extras = data.getExtras();
++                            Bitmap imageBitmap = (Bitmap) extras.get("data");
++                            imageView.setImageBitmap(imageBitmap);
++                            tookItemImage = true;
++                        }
++                    }
++                });
++        //------
++        buttonAddphoto.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                checkCameraPermission();
++            }
++        });
++    }
++
++    private void dispatchTakePictureIntent() {
++        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
++        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
++            cameraLauncher.launch(takePictureIntent);
++        }
++    }
++
++    //--------
++    @Override
++    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
++        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
++        if (requestCode == REQUEST_CAMERA_PERMISSION) {
++            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
++                dispatchTakePictureIntent();
++            } else {
++                Toast.makeText(getApplicationContext(), "Camera Permission Denied", Toast.LENGTH_SHORT).show();
++            }
++        }
++    }
++    //------
++    private void checkCameraPermission() {
++        if (ContextCompat.checkSelfPermission(AdvancedEntries.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
++            ActivityCompat.requestPermissions(AdvancedEntries.this, new String[]{Manifest.permission.CAMERA}, REQUEST_CAMERA_PERMISSION);
++        } else {
++            dispatchTakePictureIntent();
++        }
++    }
++
++    //------
++    public void OpenDateDialog(){
++        DatePickerDialog dialog = new DatePickerDialog(this,R.style.DialogTheme, new DatePickerDialog.OnDateSetListener() {
++            @Override
++            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
++                tv2.setText(String.valueOf(year)+" . "+String.valueOf(month+1)+" . "+String.valueOf(day));
++            }
++        }, 2023, 0, 01);
++        dialog.show();
++    }
++    public void OpenTimeDialog(){
++        TimePickerDialog Timedialog = new TimePickerDialog(this,R.style.DialogTheme, new TimePickerDialog.OnTimeSetListener() {
++            @Override
++            public void onTimeSet(TimePicker timePicker, int Hours, int minutes) {
++                StartTime.setText(String.valueOf(Hours)+":"+String.valueOf(minutes));
++
++            }
++        }, 15,00,true);
++        Timedialog.show();
++    }
++    public void EndTimeDialog(){
++        TimePickerDialog Enddialog = new TimePickerDialog(this,R.style.DialogTheme, new TimePickerDialog.OnTimeSetListener() {
++            @Override
++            public void onTimeSet(TimePicker timePicker, int Hours, int minutes) {
++                EndTime.setText(String.valueOf(Hours)+":"+String.valueOf(minutes));
++                EndTime.getText().toString();
++
++
++            }
++        }, 15,00,true);
++        Enddialog.show();
++    }
++
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/profocusedtiming/RegisterActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/profocusedtiming/RegisterActivity.java b/app/src/main/java/com/example/profocusedtiming/RegisterActivity.java
+--- a/app/src/main/java/com/example/profocusedtiming/RegisterActivity.java	
++++ b/app/src/main/java/com/example/profocusedtiming/RegisterActivity.java	(date 1686611395212)
+@@ -24,7 +24,6 @@
+     // Firebase
+     private FirebaseAuth mAuth;
+     private DatabaseReference myRef;
+-    private FirebaseDatabase database;
+ 
+     @Override
+     public void onStart() {
+@@ -53,7 +52,7 @@
+ 
+         // Firebase initialization
+         mAuth = FirebaseAuth.getInstance();
+-        database = FirebaseDatabase.getInstance("https://profocusedtiming-default-rtdb.europe-west1.firebasedatabase.app/");
++        FirebaseDatabase database = FirebaseDatabase.getInstance("https://profocusedtiming-default-rtdb.europe-west1.firebasedatabase.app/");
+         myRef = database.getReference("Users");
+ 
+         tv.setOnClickListener(view -> startActivity(new Intent(RegisterActivity.this, LoginActivity.class)));
+Index: app/src/main/java/com/example/profocusedtiming/AdvancedCategories.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/profocusedtiming/AdvancedCategories.java b/app/src/main/java/com/example/profocusedtiming/AdvancedCategories.java
+--- a/app/src/main/java/com/example/profocusedtiming/AdvancedCategories.java	
++++ b/app/src/main/java/com/example/profocusedtiming/AdvancedCategories.java	(date 1686601295384)
+@@ -16,12 +16,9 @@
+ 
+ public class AdvancedCategories extends AppCompatActivity {
+ 
+-    private FirebaseDatabase database;
+     private DatabaseReference myRef;
+ 
+ 
+-    private String userId;
+-    private FirebaseAuth mAuth;
+     Button AddCategory = findViewById(R.id.CategoryCreate);
+     //end of new code
+     EditText Category_Name;
+@@ -34,12 +31,12 @@
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_advanced_categories);
+-        mAuth = FirebaseAuth.getInstance();
+-        userId = mAuth.getCurrentUser().getUid();
++        FirebaseAuth mAuth = FirebaseAuth.getInstance();
++        String userId = mAuth.getCurrentUser().getUid();
+ 
+-        database = FirebaseDatabase.getInstance("https://profocusedtiming-default-rtdb.europe-west1.firebasedatabase.app/");
++        FirebaseDatabase database = FirebaseDatabase.getInstance("https://profocusedtiming-default-rtdb.europe-west1.firebasedatabase.app/");
+         Category_Name = findViewById(R.id.editTextCategoryName);
+-        myRef = database.getReference("Category/"+userId);
++        myRef = database.getReference("Category/"+ userId);
+ 
+         MinSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+             @Override
+@@ -93,15 +90,15 @@
+                 Toast.makeText(getApplicationContext(), "please enter a name for the category", Toast.LENGTH_SHORT).show();
+             }
+ 
+-            CreateCat(CatName, Integer.parseInt(MIN),Integer.parseInt(MAX));
++            CreateCat(CatName, Integer.parseInt(MIN),Integer.parseInt(MAX),0);
+             //END OF NEW CODE
+ 
+ 
+         });
+ 
+     }
+-    private void CreateCat(String name, int min,int max) {
+-        Category category = new Category(name, min,max, 0);
++    private void CreateCat(String name, int min,int max, int numberOfItems) {
++        Category category = new Category(name, min,max,numberOfItems);
+         String id = myRef.push().getKey();
+         myRef.child(id).setValue(category);
+         Toast.makeText(this, "Category Created", Toast.LENGTH_SHORT).show();
+Index: app/src/main/java/com/example/profocusedtiming/RecyclerAdapaterEntries.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/profocusedtiming/RecyclerAdapaterEntries.java b/app/src/main/java/com/example/profocusedtiming/RecyclerAdapaterEntries.java
+--- a/app/src/main/java/com/example/profocusedtiming/RecyclerAdapaterEntries.java	
++++ b/app/src/main/java/com/example/profocusedtiming/RecyclerAdapaterEntries.java	(date 1686607571479)
+@@ -67,10 +67,10 @@
+         String uri = sheet_entries.get(position).getImageUrl();
+ 
+ 
+-        Picasso.get().load(uri).into(holder.imgItem);
++       /* Picasso.get().load(uri).into(holder.imgItem);
+         holder.txtTaskName.setText(categoryItem);
+         holder.txtDescription.setText(categoryDescription);
+-        holder.TaskDate.setText(taskdate2);
++        holder.TaskDate.setText(taskdate2);*/
+ 
+ 
+     }
+Index: app/src/main/java/com/example/profocusedtiming/recyclerAdapterCategories.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/profocusedtiming/recyclerAdapterCategories.java b/app/src/main/java/com/example/profocusedtiming/recyclerAdapterCategories.java
+--- a/app/src/main/java/com/example/profocusedtiming/recyclerAdapterCategories.java	
++++ b/app/src/main/java/com/example/profocusedtiming/recyclerAdapterCategories.java	(date 1686610704410)
+@@ -32,7 +32,7 @@
+ 
+             this.view = view;
+             txtCategoryName  = view.findViewById(R.id.txtCategoryName);
+-            txtGoalValue = view.findViewById(R.id.txtGoalValue);
++            txtGoalValue = view.findViewById(R.id.txtMaxGoal);
+ 
+             itemView.setTag(this);
+             itemView.setOnClickListener(mOnItemClickListener);
+@@ -44,7 +44,7 @@
+     @NonNull
+     @Override
+     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.categories_list, parent, false);
++        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.allategories, parent, false);
+ 
+         return new MyViewHolder(itemView);
+     }
+@@ -53,10 +53,10 @@
+     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+ 
+         String category = categories.get(position).getName();
+-        int categoryGaol = categories.get(position).getGoal();
++       // int categoryGaol = categories.get(position).getGoal();
+         int categoryNumItems = categories.get(position).getNumberOfItems();
+ 
+-        holder.txtGoalValue.setText(categoryNumItems+"/"+categoryGaol);
++       // holder.txtGoalValue.setText(categoryNumItems+"/"+categoryGaol);
+         holder.txtCategoryName.setText(category);
+         /*
+          */
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	
++++ b/app/src/main/AndroidManifest.xml	(date 1686611074784)
+@@ -2,8 +2,8 @@
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools">
+ 
+-    <uses-permission android:name="android.permission.CAMERA" />
+-    <uses-permission android:name="android.permission.INTERNET" />
++
++
+ 
+     <application
+         android:allowBackup="true"
+@@ -15,11 +15,12 @@
+         android:theme="@style/Theme.Profocusedtiming"
+         tools:targetApi="31">
+         <activity
+-            android:name=".AdvancedCategories"
++            android:name=".AdvancedEntries"
+             android:exported="false" />
+         <activity
+-            android:name=".SplashActivity"
++            android:name=".AdvancedCategories"
+             android:exported="false" />
++
+         <activity
+             android:name=".Reports"
+             android:exported="false" />
